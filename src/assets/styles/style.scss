@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+
+    width: 100vW;
+    height: 100vH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    .board {
+        width: calc(90px*8);
+        height: calc(90px*8);
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .cell {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            &.black {
+                background-color: deepskyblue;
+
+            }
+
+            &.white {
+
+                background-color: lightgoldenrodyellow;
+
+            }
+
+        }
+    }
+
+
+
+    .figurine {
+        
+        background-image: url("../img/chess.png");
+  background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    &.black{
+        background-position-y: 0px;
+        }
+    &.white{
+        background-position-y: -80px;
+        }
+    &.king {
+            background-position-x: -0px;
+        
+        }
+    &.queen { 
+            background-position-x: -80px;
+        }
+    &.rook { 
+            background-position-x: -160px;
+        }
+    &.bishop { 
+            background-position-x: -240px;
+        }
+    &.knight { 
+            background-position-x: -320px;
+        }
+    &.pawn { 
+            background-position-x: -400px;
+        }
+        }
+}
