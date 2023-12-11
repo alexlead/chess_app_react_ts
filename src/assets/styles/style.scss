@@ -15,6 +15,7 @@
 
 
     .board {
+        
         width: calc(90px*8);
         height: calc(90px*8);
         display: flex;
@@ -27,7 +28,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
+            position: relative;
 
             &.black {
                 background-color: deepskyblue;
@@ -39,6 +40,24 @@
                 background-color: lightgoldenrodyellow;
 
             }
+        
+            &.selected{
+            border: 5px solid brown;
+            }
+
+            &.available{ 
+            border: 5px solid green;
+                }
+                    
+            .available{
+                height: 12px;
+                width: 12px;
+                border-radius: 50%;
+                background: #22c022;
+                position: absolute;
+                left: calc(50% - 6px);
+                top: calc(50% - 6px); 
+                }
 
         }
     }
@@ -49,32 +68,34 @@
         
         background-image: url("../img/chess.png");
   background-repeat: no-repeat;
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     &.black{
-        background-position-y: 0px;
+        background-position-y: 5px;
         }
     &.white{
-        background-position-y: -80px;
+        background-position-y: -75px;
         }
     &.king {
-            background-position-x: -0px;
+            background-position-x: 5px;
         
         }
     &.queen { 
-            background-position-x: -80px;
+            background-position-x: -75px;
         }
     &.rook { 
-            background-position-x: -160px;
+            background-position-x: -151px;
         }
     &.bishop { 
-            background-position-x: -240px;
+            background-position-x: -228px;
         }
     &.knight { 
-            background-position-x: -320px;
+            background-position-x: -307px;
         }
     &.pawn { 
-            background-position-x: -400px;
+            background-position-x: -385px;
         }
         }
 }
+
+   
