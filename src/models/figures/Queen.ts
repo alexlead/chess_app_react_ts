@@ -10,4 +10,18 @@ export class Queen extends Figure {
         this.logo = "queen";
         this.name = FigureName.QUEEN;
       }
+
+
+      canMoove(target: Cell): boolean {
+        if( !super.canMoove(target)) {
+          return false;
+        }
+        if(this.cell.isEmptyVertical(target)){
+          return true;
+        }
+
+        return false;
+    }
+
+
 }

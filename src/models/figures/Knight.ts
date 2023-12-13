@@ -11,4 +11,13 @@ export class Knight extends Figure {
         
       }
 
+      canMoove(target: Cell): boolean {
+        if( !super.canMoove(target)) {
+          return false;
+        }
+        
+
+        return true;
+    }
+
 }

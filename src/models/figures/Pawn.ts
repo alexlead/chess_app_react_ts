@@ -10,4 +10,15 @@ export class Pawn extends Figure {
         this.logo = "pawn";
         this.name = FigureName.PAWN;
       }
+
+      canMoove(target: Cell): boolean {
+        if( !super.canMoove(target)) {
+          return false;
+        }
+        
+
+        return true;
+    }
+
+    
 }

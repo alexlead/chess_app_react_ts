@@ -23,8 +23,8 @@ export class Figure {
     id: number;
 
 
-    constructor (color: Colors, cell: Cell) {
-        
+    constructor(color: Colors, cell: Cell) {
+
         this.color = color;
         this.cell = cell;
         this.cell.figure = this;
@@ -33,12 +33,19 @@ export class Figure {
         this.id = Math.random();
     }
 
-    canMoove (target: Cell): boolean {
+    canMoove(target: Cell): boolean {
+
+        if (target.figure?.color === this.color) {
+            return false;
+        }
+        if (target.figure?.name === FigureName.KING) {
+            return false;
+        }
         return true;
     }
 
-    moveFigure (target: Cell) {
-        
+    moveFigure(target: Cell) {
+
     }
-    
+
 }

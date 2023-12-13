@@ -9,4 +9,15 @@ export class Rook extends Figure {
         this.logo = "rook";
         this.name = FigureName.ROOK;
       }
+
+
+      canMoove(target: Cell): boolean {
+        if( !super.canMoove(target)) {
+          return false;
+        }
+        
+
+        return true;
+    }
+    
 }

@@ -9,4 +9,13 @@ export class King extends Figure {
         this.logo = "king";
         this.name = FigureName.KING;
       }
+
+      canMoove(target: Cell): boolean {
+        if( !super.canMoove(target)) {
+          return false;
+        }
+        
+
+        return true;
+    }
 }
